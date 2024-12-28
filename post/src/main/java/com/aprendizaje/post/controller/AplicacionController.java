@@ -6,14 +6,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AplicaciónController {
+public class AplicacionController {
     
     @PostMapping("/cliente")
     public void crearCliente(@RequestBody Cliente cli){
     
         System.out.println("Cliente creado");
-        System.out.println("Nombre del cliente: " + cli.getNombre());
-        System.out.println("Apellido del cliente: " + cli.getApellido());
-        
+        System.out.println("Nombre: " + cli.getNombre());
+        System.out.println("Apellido: " + cli.getApellido());
     }
 }
