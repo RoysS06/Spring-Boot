@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PersonaService implements IPersonaService{
-    
+
     @Autowired
     private IPersonaRepository persoRepo;
-
+    
     @Override
     public void savePersona(Persona perso) {
         persoRepo.save(perso);
@@ -23,9 +23,8 @@ public class PersonaService implements IPersonaService{
     }
 
     @Override
-    public List<Persona> getPersonas() {
-        List<Persona> listaPersonas = persoRepo.findAll();
-        return listaPersonas;
+    public void editPersona(Persona perso) {
+        this.savePersona(perso);
     }
 
     @Override
@@ -35,15 +34,11 @@ public class PersonaService implements IPersonaService{
     }
 
     @Override
-    public void editPersona(Long idOriginal, Long idNueva, String nuevoNombre, String nuevoApellido, int nuevaEdad) {
-        Persona perso = this.findPersona(idOriginal);
-        
-        perso.setId(idNueva);
-        perso.setNombre(nuevoNombre);
-        perso.setApellido(nuevoApellido);
-        perso.setEdad(nuevaEdad);
-        
-        this.savePersona(perso);
+    public List<Persona> getPersonas() {
+        List <Persona> listaPersonas = persoRepo.findAll();
+        return listaPersonas;
     }
     
+    
+
 }

@@ -1,10 +1,10 @@
 package com.jpaAplication.pruebaJPA.repository;
 
-import com.jpaAplication.pruebaJPA.model.Persona;
+import com.jpaAplication.pruebaJPA.model.Mascota;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IPersonaRepository extends JpaRepository<Persona, Long>{
-
+public interface IMascotaRepository extends JpaRepository<Mascota, Long>{
+    
 }

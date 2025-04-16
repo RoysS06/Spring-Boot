@@ -5,20 +5,19 @@ import java.util.List;
 
 public interface IPersonaService {
     
-    // ALTA
+    //CREAR
     public void savePersona(Persona perso);
     
-    //ELIMINACIÓN
+    //ELIMINAR
     public void deletePersona(Long id);
     
-     // LECTURA DE TODOS
-    public List<Persona> getPersonas();
+    //EDITAR
+    public void editPersona(Persona perso);
     
-    // LECTURA DE 1 SOLA PERSONA
+    //LECTURA INDIVIDUAL
     public Persona findPersona(Long id);
     
-    // MODIFICACIÓN
-    public void editPersona(Long idOriginal, Long idNueva, String nuevoNombre, String nuevoApellido, int nuevaEdad);
-    
+    //LECTURA GRUPAL
+    public List<Persona> getPersonas();
     
 }
